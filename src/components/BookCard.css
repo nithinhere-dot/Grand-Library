@@ -1,0 +1,61 @@
+.book-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  width: 100%;
+}
+
+/* Image placeholder – matches screenshot proportions */
+.book-image {
+  height: 260px; /* KEY SIZE */
+  background: linear-gradient(135deg, #dcdcdc, #f0f0f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-image span {
+  font-size: 48px;
+  font-weight: bold;
+  color: #b08a57;
+}
+
+/* Meta row */
+.book-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px 0;
+}
+
+.tag {
+  background: #f3e4cf;
+  color: #5a3a23;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.status {
+  font-size: 13px;
+  color: #4b7f52;
+}
+
+/* Text */
+.book-title {
+  padding: 10px 16px 4px;
+  font-size: 18px;
+  color: #3b2416;
+}
+
+.book-author {
+  padding: 0 16px;
+  font-size: 14px;
+  color: #7a6352;
+}
+
+.book-year {
+  padding: 6px 16px 16px;
+  font-size: 13px;
+  color: #a08b7a;
+}
