@@ -1,59 +1,106 @@
-* {
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+*{
+  box-sizing:border-box;
+  font-family:Segoe UI;
 }
 
-.admin-container {
-  display: flex;
-  min-height: 100vh;
-  background-color: #f5f3ef;
+.dashboard-container{
+  display:flex;
+  min-height:100vh;
+  background:#f4f6f9;
 }
 
 /* Sidebar */
-.admin-sidebar {
-  width: 240px;
-  background-color: #2f2a25;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+.dashboard-sidebar{
+  width:220px;
+  background:#ffffff;
+  padding:20px;
+  box-shadow:2px 0 10px rgba(0,0,0,0.05);
 }
 
-.admin-title {
-  margin-bottom: 20px;
-  font-size: 20px;
-  text-align: center;
+.logo{
+  color:#2a7de1;
 }
 
-.admin-sidebar button {
-  background: none;
-  border: none;
-  color: #ddd;
-  padding: 12px;
-  text-align: left;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
+.dashboard-sidebar ul{
+  list-style:none;
+  padding:0;
 }
 
-.admin-sidebar button:hover {
-  background-color: #453f39;
+.dashboard-sidebar li{
+  padding:12px;
+  margin-bottom:5px;
+  cursor:pointer;
+  border-radius:6px;
 }
 
-.admin-sidebar button.active {
-  background-color: #c2a36b;
-  color: #2f2a25;
-  font-weight: bold;
+.dashboard-sidebar li.active{
+  background:#eaf2ff;
+  color:#2a7de1;
 }
 
-/* Main content */
-.admin-content {
-  flex: 1;
-  padding: 40px;
+/* Main */
+
+.dashboard-main{
+  flex:1;
+  padding:40px;
 }
 
-.admin-content h1 {
-  margin-bottom: 10px;
-  color: #2f2a25;
+.stats-row{
+  display:flex;
+  gap:20px;
+  margin-top:20px;
+}
+
+.stat-card{
+  flex:1;
+  padding:20px;
+  color:#fff;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.yellow{background:#f2c94c;}
+.red{background:#eb5757;}
+.green{background:#27ae60;}
+.blue{background:#2f80ed;}
+
+/* Graph */
+
+.graph-section{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  margin-top:30px;
+}
+
+.fake-graph{
+  height:150px;
+  background:linear-gradient(transparent 60%, rgba(47,128,237,.2));
+  border-bottom:2px solid #2f80ed;
+}
+
+/* Tables */
+
+.tables-section{
+  display:flex;
+  gap:20px;
+  margin-top:30px;
+}
+
+.table-card{
+  flex:1;
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+}
+
+.table-card ul{
+  list-style:none;
+  padding:0;
+}
+
+.table-card li{
+  padding:10px 0;
+  border-bottom:1px solid #eee;
 }

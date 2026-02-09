@@ -1,76 +1,72 @@
-import { useState } from "react";
-import "./AdminDashboard.css";
+
+import "../styles/AdminDashboard.css";
+import "../styles/AdminDashboard.css";
 
 function AdminDashboard() {
-  const [activeTab, setActiveTab] = useState("overview");
-
   return (
-    <div className="admin-container">
+    <div className="dashboard-container">
+
       {/* Sidebar */}
-      <aside className="admin-sidebar">
-        <h2 className="admin-title">Admin Panel</h2>
+      <aside className="dashboard-sidebar">
+        <h2 className="logo">PROCORNER</h2>
 
-        <button
-          className={activeTab === "overview" ? "active" : ""}
-          onClick={() => setActiveTab("overview")}
-        >
-          Overview
-        </button>
-
-        <button
-          className={activeTab === "users" ? "active" : ""}
-          onClick={() => setActiveTab("users")}
-        >
-          Users
-        </button>
-
-        <button
-          className={activeTab === "books" ? "active" : ""}
-          onClick={() => setActiveTab("books")}
-        >
-          Books
-        </button>
-
-        <button
-          className={activeTab === "borrowings" ? "active" : ""}
-          onClick={() => setActiveTab("borrowings")}
-        >
-          Borrowings
-        </button>
+        <ul>
+          <li className="active">Dashboard</li>
+          <li>Total Books</li>
+          <li>Add Books</li>
+          <li>Issue Books</li>
+          <li>Members</li>
+          <li>Settings</li>
+        </ul>
       </aside>
 
-      {/* Main Content */}
-      <main className="admin-content">
-        {activeTab === "overview" && <Overview />}
-        {activeTab === "users" && <Users />}
-        {activeTab === "books" && <Books />}
-        {activeTab === "borrowings" && <Borrowings />}
+      {/* Main */}
+      <main className="dashboard-main">
+
+        <h1>Welcome to Dashboard</h1>
+
+        {/* Stats Row */}
+        <div className="stats-row">
+          <div className="stat-card yellow">Logged in users 10</div>
+          <div className="stat-card red">Total Books 232</div>
+          <div className="stat-card green">Members 1234</div>
+          <div className="stat-card blue">Returned 5</div>
+        </div>
+
+        {/* Graph Section */}
+        <div className="graph-section">
+          <h3>Reports</h3>
+          <div className="fake-graph"></div>
+        </div>
+
+        {/* Tables */}
+        <div className="tables-section">
+
+          <div className="table-card">
+            <h3>New Members</h3>
+            <ul>
+              <li>Ramya Kumar</li>
+              <li>Vasant Chauhan</li>
+              <li>Dilip Reddy</li>
+              <li>Kamal Patel</li>
+            </ul>
+          </div>
+
+          <div className="table-card">
+            <h3>New Books</h3>
+            <ul>
+              <li>Book Name 1</li>
+              <li>Book Name 2</li>
+              <li>Book Name 3</li>
+              <li>Book Name 4</li>
+            </ul>
+          </div>
+
+        </div>
+
       </main>
     </div>
   );
-}
-
-/* ----- Dummy sections (logic focus) ----- */
-
-function Overview() {
-  return (
-    <>
-      <h1>Library Overview</h1>
-      <p>Total users, books, and active borrowings.</p>
-    </>
-  );
-}
-
-function Users() {
-  return <h1>User Management</h1>;
-}
-
-function Books() {
-  return <h1>Book Management</h1>;
-}
-
-function Borrowings() {
-  return <h1>Borrowing Records</h1>;
 }
 
 export default AdminDashboard;
